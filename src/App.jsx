@@ -5,14 +5,13 @@ function App() {
   
   return (
     <div className='app'> 
-      <Board />
-
+    <div>
+    <button>click</button>
+    </div>
+      
 
     </div>
-     
   );
-
-
 }
 
 export default App;
