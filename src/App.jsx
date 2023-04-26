@@ -20,21 +20,21 @@ function App() {
       return;
     }
 
-    // setHistory(currentHistory => {
-    //   const isTraversing = currentMove + 1 !== currentHistory.length;
+    setHistory(currentHistory => {
+      const isTraversing = currentMove + 1 !== currentHistory.length;
 
-    //   const lastGamingState = isTraversing
-    //     ? currentHistory[currentMove]
-    //     : history[history.length - 1];
+      const lastGamingState = isTraversing
+        ? currentHistory[currentMove]
+        : history[history.length - 1];
 
-    //   const nextSquaresState = lastGamingState.squares.map(
-    //     (squareValue, position) => {
-    //       if (clickedPosition === position) {
-    //         return lastGamingState.isXNext ? 'X' : 'O';
-    //       }
-    //       return squareValue;
-    //     }
-    //   );
+      const nextSquaresState = lastGamingState.squares.map(
+        (squareValue, position) => {
+          if (clickedPosition === position) {
+            return lastGamingState.isXNext ? 'X' : 'O';
+          }
+          return squareValue;
+        }
+      );
 
       const base = isTraversing
         ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
